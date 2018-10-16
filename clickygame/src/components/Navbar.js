@@ -8,9 +8,6 @@ class Navbar extends Component {
           Clicky Game!
         </a>
         <div className="navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav m-auto">
-            <li className="nav-item active">Click an Image to Begin!</li>
-          </ul>
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <a className="nav-link">Score: 0 | Top Score: 0</a>

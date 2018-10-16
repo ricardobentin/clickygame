@@ -5,7 +5,7 @@ import Container from "./components/Container";
 import Footer from "./components/Footer";
 
 const App = () => (
-  <div>
+  <div className="container">
     <Navbar /> <Header /> <Container /> <Footer />
   </div>
 );

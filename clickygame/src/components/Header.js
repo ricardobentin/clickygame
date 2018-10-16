@@ -8,6 +8,8 @@ class Header extends Component {
         <h2>
           Click on an image to earn points, but don't click on any more than
           once!
+
+          Click on any image to start the game!
         </h2>
       </header>
     );
