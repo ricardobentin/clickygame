@@ -1,13 +1,21 @@
 import React, { Component } from "react";
 import ThundercatsCard from "./components/ThundercatsCard";
 import ThundercatsWrapper from "./components/ThundercatsWrapper";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Column from "./components/Column";
 import Row from "./components/Row";
 import thundercats from "./thundercats.json";
 import "./App.css";
+
+function shuffleThunderCats(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
 class App extends Component {
   // Setting this.state.thundercatss to the thundercats json array
@@ -21,9 +29,43 @@ class App extends Component {
 
   //function to handle what happens on click
   handleClick = id => {
-    // We always use the setState method to update a component's state
-    this.setState({ clicked: this.state.thundercatsClicked.concat(id) });
-    this.setState({ score: this.state.score + 1 });
+    if (this.state.thundercatsClicked.indexOf(id) === -1) {
+      this.handleIncrement();
+      this.setState({ clicked: this.state.thundercatsClicked.concat(id) });
+    } else {
+      this.handleReset();
+    }
+  };
+
+  handleIncrement = () => {
+    const newScore = this.state.currentScore + 1;
+    this.setState({
+      currentScore: newScore,
+      userMessage: "Awesome! Click another unique Image!"
+    });
+    if (newScore >= this.state.topScore) {
+      this.setState({ topScore: newScore });
+    } else if (newScore === 12) {
+      this.setState({
+        userMessage: "You win! There are no more unique images to click!"
+      });
+    }
+    this.handleShuffle();
+  };
+
+  handleReset = () => {
+    this.setState({
+      currentScore: 0,
+      topScore: this.state.topScore,
+      userMessage: "Let's try to beat your top score until you can reach 12!",
+      thundercatsClicked: []
+    });
+    this.handleShuffle();
+  };
+
+  handleShuffle = () => {
+    let shuffledThundercats = shuffleThunderCats(thundercats);
+    this.setState({ friends: shuffledThundercats });
   };
 
   // Map over this.state.thundercats and render a ThundercatsCard component for each thundercats object
