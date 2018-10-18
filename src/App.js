@@ -8,14 +8,6 @@ import Column from "./components/Column";
 import Row from "./components/Row";
 import thundercats from "./thundercats.json";
 import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
-
-ReactDOM.render(
-  <Router basename={process.env.PUBLIC_URL}>
-    <App />
-  </Router>,
-  document.getElementById("root")
-);
 
 function shuffleThunderCats(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -83,11 +75,6 @@ class App extends Component {
   render() {
     return (
       <ThundercatsWrapper>
-        <Route
-          exact
-          path={`/`}
-          render={routerProps => <Home routerProps={routerProps} />}
-        />
         <Navbar
           title="Thundercats, WHOOOA!"
           score={this.state.currentScore}
