@@ -7,11 +7,11 @@ nav {
   font-family: "arial";
 }
 
-a {
+nav a {
   color: gray;
 }
 
-a:hover {
+nav a:hover {
   color: white;
   text-decoration: none;
 }

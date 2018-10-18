@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ThundercatsCard from "./components/ThundercatsCard";
 import ThundercatsWrapper from "./components/ThundercatsWrapper";
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Column from "./components/Column";
 import Row from "./components/Row";

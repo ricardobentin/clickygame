@@ -5,9 +5,8 @@ const Navbar = props => (
   <nav>
     <ul>
       <li className="brand">
-        <a href="/">{props.title}</a>
+        <img src="./tcats.jpg" alt="thundercats" href="/" />
       </li>
-
       <li id="rw">{props.userMessage}</li>
 
       <li id="cur-sco">Current Score: {props.score}</li>
