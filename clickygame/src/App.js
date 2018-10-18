@@ -31,7 +31,9 @@ class App extends Component {
   handleClick = id => {
     if (this.state.thundercatsClicked.indexOf(id) === -1) {
       this.handleIncrement();
-      this.setState({ clicked: this.state.thundercatsClicked.concat(id) });
+      this.setState({
+        thundercatsClicked: this.state.thundercatsClicked.concat(id)
+      });
     } else {
       this.handleReset();
     }
@@ -41,11 +43,11 @@ class App extends Component {
     const newScore = this.state.currentScore + 1;
     this.setState({
       currentScore: newScore,
-      userMessage: "Awesome! Click another unique Image!"
+      userMessage: "Awesome! Keep Clicking Unique Images!"
     });
-    if (newScore >= this.state.topScore) {
+    if (newScore > this.state.topScore) {
       this.setState({ topScore: newScore });
-    } else if (newScore === 12) {
+    } else if (this.state.currentScore > 11) {
       this.setState({
         userMessage: "You win! There are no more unique images to click!"
       });
@@ -57,7 +59,8 @@ class App extends Component {
     this.setState({
       currentScore: 0,
       topScore: this.state.topScore,
-      userMessage: "Let's try to beat your top score until you can reach 12!",
+      userMessage:
+        "You clicked this one already. Let's try to beat your top score until you can reach 12!",
       thundercatsClicked: []
     });
     this.handleShuffle();
@@ -88,7 +91,6 @@ class App extends Component {
                 name={thundercats.name}
                 image={thundercats.image}
                 handleClick={this.handleClick}
-                isClicked={this.state.clicked}
               />
             </Column>
           ))}
