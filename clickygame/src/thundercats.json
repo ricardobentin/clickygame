@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "name": "Lion-o",
+    "image": "/img/Lion-o.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Panthro",
+    "image": "/img/Panthro.jpg",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "name": "Tygra",
+    "image": "/img/Tygra.jpg",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "name": "Cheetara",
+    "image": "/img/Cheetara.jpg",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "name": "Wilykat",
+    "image": "/img/Wilykat.jpg",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "name": "Wilykit",
+    "image": "/img/Wilykit.jpg",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "name": "Snarf",
+    "image": "/img/Snarf.jpg",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "name": "Jaga",
+    "image": "/img/Jaga.jpg",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "name": "Jackalman",
+    "image": "/img/Jackalman.jpg",
+    "clicked": false
+  },
+  {
+    "id": 10,
+    "name": "Monkian",
+    "image": "/img/Monkian.jpg",
+    "clicked": false
+  },
+  {
+    "id": 11,
+    "name": "Mumm-ra",
+    "image": "/img/Mumm-ra.jpg",
+    "clicked": false
+  },
+  {
+    "id": 12,
+    "name": "Slithe",
+    "image": "/img/Slithe.jpg",
+    "clicked": false
+  }
+]

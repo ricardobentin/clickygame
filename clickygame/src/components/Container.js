@@ -7,8 +7,7 @@ class Container extends Component {
     score: 0
   };
 
-  // handleIncrement increments this.state.count by 1
-  handleIncrement = () => {
+  handleClick = () => {
     // We always use the setState method to update a component's state
     this.setState({ score: this.state.score + 1 });
     this.setState({ clicked: true });
@@ -20,7 +19,7 @@ class Container extends Component {
         <div className="row">
           <div
             className="col-3"
-            onClick={this.handleIncrement}
+            onClick={this.handleClick}
             isClicked={this.state.clicked}
             role="img"
             aria-label="click item"
