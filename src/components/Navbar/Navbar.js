@@ -5,7 +5,7 @@ const Navbar = props => (
   <nav>
     <ul>
       <li className="brand">
-        <img src="/tcats.jpg" alt="thundercats" href="/" />
+        <img src="img/tcats.jpg" alt="thundercats" href="/" />
       </li>
       <li id="rw">{props.userMessage}</li>
 
