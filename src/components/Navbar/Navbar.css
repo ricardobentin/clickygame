@@ -2,18 +2,13 @@ nav {
   width: 100%;
   font-size: 18px;
   color: #fff;
-  background-color: #6caddc;
+  background-color: black;
   height: auto;
   font-family: "arial";
 }
 
-nav a {
-  color: gray;
-}
-
-nav a:hover {
-  color: white;
-  text-decoration: none;
+img {
+  width: 60%;
 }
 
 nav li {

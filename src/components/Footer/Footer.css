@@ -1,7 +1,8 @@
 footer {
   width: 100%;
-  background-color: #6caddc;
-  height: auto;
+  background-color: black;
+  height: 100px;
+  margin: auto;
 }
 
 footer a {
